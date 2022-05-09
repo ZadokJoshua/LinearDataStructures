@@ -42,7 +42,7 @@ namespace Data_Structures
         // AddFirst Method
         public void AddFirst(T item)
         {
-
+            var newNode = new Node(item);
         }
 
         // AddLast Method
