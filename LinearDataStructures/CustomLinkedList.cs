@@ -40,18 +40,36 @@ namespace Data_Structures
         }
 
         // AddFirst Method
-        public void AddFirst(T item)
+        public void AddFirst(ListNode<T> node)
         {
-            var newNode = new Node(item);
+            if (Head == null)
+            {
+                Head = Tail = node;
+                Head.NextNode = Tail;
+            }
+            else
+            {
+                node.NextNode = Head;
+                Head = node;
+            }
         }
 
         // AddLast Method
-        public void AddLast(T item)
+        public void AddLast(ListNode<T> node)
         {
-
+            if (Tail == null)
+            {
+                Tail = Head = node;
+                Head.NextNode = Tail;
+            }
+            else
+            {
+                node.NextNode = Head;
+                Head = node;
+            }
         }
 
-        // AddLast Method
+        // First Method
         public void First(T item)
         {
 
@@ -64,10 +82,12 @@ namespace Data_Structures
         }
 
         // Remove
-        public void Remove(T item)
+        public void Remove(ListNode<T> node)
         {
-
+            
         }
+
+        
 
         // Clear
         public void Clear(T item)
