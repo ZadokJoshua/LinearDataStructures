@@ -4,10 +4,11 @@
     {
         public ListNode<T> Head;
         public ListNode<T> Tail;
+        public static int Count = 0;
 
         public CustomQueue()
         {
-            this.Head = this.Tail = null;
+            Head = Tail = null;
         }
 
         // Enqueue
@@ -15,23 +16,24 @@
         {
             var newNode = new ListNode<T>(item);
 
-            if(this.Tail == null)
+            if(Tail == null)
             {
-                this.Head = this.Tail = newNode;
+                Head = Tail = newNode;
             }
             else
             {
-                this.Tail.NextNode = newNode;
-                this.Tail = newNode;
+                Tail.NextNode = newNode;
+                Tail = newNode;
             }
 
             Console.WriteLine($"{item} has been inserted into the queue.");
+            Count ++;
         }
 
         // Dequeue
         public void Dequeue()
         {
-            if(this.Head == null)
+            if(Head == null)
             {
                 Console.WriteLine("Queue is empty");
                 return;
@@ -46,10 +48,20 @@
             }
 
             Console.WriteLine($"Item deleted is {temp.Value}");
+            Count --;
         }
 
         // Contains
+        public void Contain(T item, ListNode<T> theQueue) 
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                if(Tail.Value == item)
+                {
 
+                }
+            }
+        }
 
         // Clear
         public void Clear()

@@ -44,7 +44,7 @@
                 return;
             }
 
-            Console.WriteLine($"{this.StackTop.Value} is the stack top");
+            Console.WriteLine($"{StackTop.Value} is the stack top");
         }
     }
 }
