@@ -82,15 +82,49 @@ namespace Data_Structures
                 {
                     return current;
                 }
-
             }
-
+            return null;
         }
 
         // Remove
-        public void Remove(ListNode<T> node)
+        public void Remove(T item)
         {
-            
+            var nodeToRemove = Find(item);
+            if (nodeToRemove is null)
+            {
+                return;
+            }
+            else if (nodeToRemove.Equals(Head))
+            {
+                var temp = Head.NextNode;
+                Head.NextNode = null;
+                Head = temp;
+            }
+            else if (nodeToRemove.Equals(Tail))
+            {
+                var temp = Tail.PreviousNode;
+                Tail.PreviousNode = null;
+                Tail = temp;
+            }
+            else
+            {
+                var prev = nodeToRemove.PreviousNode;
+                var next = nodeToRemove.NextNode;
+                if(prev != null) prev.NextNode = next;
+                if(next != null) next.PreviousNode = prev;
+                nodeToRemove.PreviousNode = nodeToRemove.NextNode = null;
+            }
+
+
+
+
+            //var currentItem = Head;
+            //if (Head.Value.Equals(item))
+            //{
+            //    var temp = Head;
+            //    Head = Head.NextNode;
+            //    temp.NextNode = null;
+            //}
         }
 
         
@@ -98,7 +132,7 @@ namespace Data_Structures
         // Clear
         public void Clear(T item)
         {
-
+            Head = Tail = null;
         }
     }
 }
