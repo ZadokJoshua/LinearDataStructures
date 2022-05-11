@@ -11,6 +11,7 @@ namespace Data_Structures
         public ListNode<T> Head { get; set; }
         public ListNode<T> Tail { get; set; }
 
+        // AddItem method
         public void AddItem(T item)
         {
             if (Head is null)
@@ -23,6 +24,22 @@ namespace Data_Structures
                 var newNode = new ListNode<T>(item, temp);
                 Tail.NextNode = newNode;
                 Tail = newNode;
+            }
+        }
+
+        // AddFirst Method
+        public void AddFirst(T item)
+        {
+            if (Head == null)
+            {
+                Head = Tail = new ListNode<T>(item);
+                Head.NextNode = Tail;
+            }
+            else
+            {
+                var temp = Head;
+                var newNode = new ListNode<T>(item, null, temp);
+                Head = newNode;
             }
         }
 
@@ -39,20 +56,7 @@ namespace Data_Structures
         //    }
         //}
 
-        // AddFirst Method
-        public void AddFirst(T item)
-        {
-            if (Head == null)
-            {
-                Head = Tail = new ListNode<T>();
-                Head.NextNode = Tail;
-            }
-            else
-            {
-                node.NextNode = Head;
-                Head = node;
-            }
-        }
+
 
         // AddLast Method
         public void AddLast(ListNode<T> node)
