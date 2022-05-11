@@ -52,14 +52,23 @@
         }
 
         // Contains
-        public void Contain(T item, ListNode<T> theQueue) 
+        public bool Contain(T item, ListNode<T> theQueue) 
         {
+            bool containCondition = false;
+
             for (int i = 0; i < Count; i++)
             {
-                if(Tail.Value == item)
+                if()
                 {
-
+                    return containCondition = true;
+                    break;
                 }
+                else
+                {
+                    Tail 
+                }
+
+
             }
         }
 
