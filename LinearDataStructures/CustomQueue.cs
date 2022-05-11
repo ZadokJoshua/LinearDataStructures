@@ -51,25 +51,19 @@
             Count --;
         }
 
-        // Contains
-        public bool Contain(T item, ListNode<T> theQueue) 
+        //// Contains
+        public ListNode<T> Contain(T item)
         {
             bool containCondition = false;
 
-            for (int i = 0; i < Count; i++)
+            for (ListNode<T> current = Head; current.NextNode != null; current = current.NextNode)
             {
-                if()
+                if (Equals(current.Value, item))
                 {
-                    return containCondition = true;
-                    break;
+                    return current;
                 }
-                else
-                {
-                    Tail 
-                }
-
-
             }
+            return null;
         }
 
         // Clear

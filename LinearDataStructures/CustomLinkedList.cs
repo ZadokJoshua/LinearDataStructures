@@ -21,8 +21,7 @@ namespace Data_Structures
             else
             {
                 var temp = Tail;
-                var newNode = new ListNode<T>(item, temp);
-                Tail.NextNode = newNode;
+                var newNode = new ListNode<T>(item, temp, null);
                 Tail = newNode;
             }
         }
@@ -73,15 +72,18 @@ namespace Data_Structures
             }
         }
 
-        // First Method
-        public void First(T item)
-        {
-
-        }
 
         // Find
-        public void Find(T item)
+        public ListNode<T> Find(T item)
         {
+            for(ListNode<T> current = Head; current.NextNode != null; current = current.NextNode)
+            {
+                if (current.Equals(item))
+                {
+                    return current;
+                }
+
+            }
 
         }
 

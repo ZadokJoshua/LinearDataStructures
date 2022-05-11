@@ -1,12 +1,16 @@
 ﻿using Data_Structures;
 
-var newList = new List<int>();
+var newQueue = new CustomQueue<int>();
+newQueue.Enqueue(1);
+newQueue.Enqueue(6);
+newQueue.Enqueue(4);
+newQueue.Enqueue(3);
+newQueue.Dequeue();
 
-var mySecondList = new LinkedList<int>();
-
-
-var myList = new CustomLinkedList<int>();
-
-myList.AddItem(1);
-myList.AddItem(2);
-myList.AddItem(3);
+var newStack = new CustomStack<int>();
+newStack.Push(0);
+newStack.Push(2);
+newStack.Push(7);
+newStack.Push(1);
+newStack.Push(3);
+newStack.Peek(1);
