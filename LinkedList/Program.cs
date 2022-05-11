@@ -1,7 +1,14 @@
 ﻿using LinkedList;
 
-var head = new Node(7);
-head.next = new Node(3);
-head.next.next = new Node(1);
-head.next.next.next = new Node(2);
-head.next.next.next.next = new Node(3);
+var myList = new MyLisT();
+myList.AddToEnd(9);
+myList.AddToEnd(10);
+myList.AddToEnd(11);
+myList.AddToEnd(12);
+
+myList.AddToBeginning(3);
+myList.AddToBeginning(58);
+myList.AddToBeginning(3);
+myList.AddToEnd(667);
+
+myList.Print();

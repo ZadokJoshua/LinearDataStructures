@@ -26,25 +26,25 @@ namespace Data_Structures
             }
         }
 
-        public void AddNode(ListNode<T> node)
-        {
-            if (Head is null)
-            {
-                Head = Tail = node;
-            }
-            else
-            {
-                Tail.NextNode = node;
-                Tail = node;
-            }
-        }
+        //public void AddNode(ListNode<T> node)
+        //{
+        //    if (Head is null)
+        //    {
+        //        Head = Tail = node;
+        //    }
+        //    else
+        //    {
+        //        Tail.NextNode = node;
+        //        Tail = node;
+        //    }
+        //}
 
         // AddFirst Method
-        public void AddFirst(ListNode<T> node)
+        public void AddFirst(T item)
         {
             if (Head == null)
             {
-                Head = Tail = node;
+                Head = Tail = new ListNode<T>();
                 Head.NextNode = Tail;
             }
             else
