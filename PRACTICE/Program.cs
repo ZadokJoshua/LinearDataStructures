@@ -2,8 +2,18 @@
 using CSharpAlgorithms;
 using System.Text;
 
-var stringsChallemnge = new AlgorithmChanllenges();
-Console.WriteLine(stringsChallemnge.ReverseEachWord("What can I do today"));
+// Challenge one testing
+//var stringsChallenge = new AlgorithmChanllenges();
+//Console.WriteLine(stringsChallenge.ReverseEachWord("What can I do today"));
+//Console.WriteLine(stringsChallenge.ReverseEachWord(" "));
+//Console.WriteLine(stringsChallenge.ReverseEachWord("I love Jesus"));
+
+// Binary Search testing and arry rotation
+var binaryExample = new AlgorithmChanllenges();
+var arr = new int[] { 1, 2, 3 };
+Console.WriteLine(binaryExample.BinarySearch(arr, 5));
+Array.ForEach(arr, x => Console.WriteLine(x));
+
 
 
 
