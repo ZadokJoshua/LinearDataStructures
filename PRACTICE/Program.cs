@@ -9,10 +9,18 @@ using System.Text;
 //Console.WriteLine(stringsChallenge.ReverseEachWord("I love Jesus"));
 
 // Binary Search testing and arry rotation
+//var binaryExample = new AlgorithmChanllenges();
+//var arr = new int[] { 1, 2, 3 };
+//Console.WriteLine(binaryExample.BinarySearch(arr, 5));
+
+// Rotate Array
+var arr = new int[] { 1, 2, 3, 4, 5, 6};
 var binaryExample = new AlgorithmChanllenges();
-var arr = new int[] { 1, 2, 3 };
-Console.WriteLine(binaryExample.BinarySearch(arr, 5));
-Array.ForEach(arr, x => Console.WriteLine(x));
+binaryExample.RotateArray(arr);
+foreach(var i in arr)
+{
+    Console.Write(i + " ");
+}
 
 
 

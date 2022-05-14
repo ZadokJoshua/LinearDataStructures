@@ -66,6 +66,7 @@ namespace CSharpAlgorithms
             {
                 arr[i] = arr[i + 1];
             }
+
             arr[arr.Length - 1] = temp;
             return arr;
         }
