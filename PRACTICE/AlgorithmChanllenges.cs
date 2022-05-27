@@ -59,6 +59,7 @@ namespace CSharpAlgorithms
             return false;
         }
 
+        // CHALLENGE 2: ALGORITHM THAT ROTATES AN ARRAY
         public int[] RotateArray(int[] arr)
         {
             int temp = arr[0];
